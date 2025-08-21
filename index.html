@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Consumo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Logo simples no topo -->
+  <div class="logo">
+    <h1>Calculadora de Consumo</h1>
+  </div>
+
+  <h2>🚗 Calculadora de Consumo de Combustível</h2>
+
+  <div class="container">
+
+    <!-- Caixa 1: Média de consumo -->
+    <div class="card">
+      <h2>Primeiro vamos calcular a sua média de consumo</h2>
+      <label>Km rodados:</label>
+      <input type="number" id="kmRodados" placeholder="Ex: 459">
+      <label>Valor gasto (R$):</label>
+      <input type="number" id="valorGasto" placeholder="Ex: 150">
+      <label>Preço do combustível (R$/L):</label>
+      <input type="number" id="precoLitro" step="0.01" placeholder="Ex: 4.17">
+      <button onclick="calcularMedia()">Calcular</button>
+      <p id="resultadoMedia"></p>
+    </div>
+
+    <!-- Caixa 2: Planejamento de viagem -->
+    <div class="card">
+      <h2>Agora iremos calcular quanto você irá gastar para chegar no seu destino</h2>
+      <label>Distância a percorrer (km):</label>
+      <input type="number" id="distancia" placeholder="Ex: 350">
+      <button onclick="planejarViagem()">Calcular</button>
+      <p id="resultadoViagem"></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
